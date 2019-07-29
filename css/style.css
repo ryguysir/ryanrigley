@@ -1,0 +1,498 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#background {
+  position: absolute;
+  width: 100%;
+  height: 110vh;
+  background: linear-gradient(to bottom right, #00d2ff, #ff6b8b);
+  overflow: hidden;
+  z-index: -3;
+}
+
+#background::before {
+  display: block;
+  content: "";
+  width: inherit;
+  height: inherit;
+  opacity: 0.5;
+  z-index: inherit;
+
+  background: linear-gradient(
+    to top right,
+    rgb(255, 0, 191),
+    rgb(42, 255, 173)
+  );
+}
+
+#intro {
+  position: absolute;
+  width: 100%;
+  height: 110vh;
+  background: linear-gradient(to bottom right, #00d0fff3, #ff6b8bf1);
+  overflow: hidden;
+  z-index: 9;
+}
+
+.introText1,
+.introText2,
+.introText3,
+.introText4 {
+  display: none;
+  position: absolute;
+  color: white;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: 40vh;
+  margin: 0 auto;
+  font-size: 400%;
+  font-weight: 500;
+  z-index: 12;
+}
+.contact {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  bottom: 0px;
+  top: 90vh;
+  text-align: center;
+  color: rgb(228, 228, 228);
+}
+
+#hamburger {
+  position: absolute;
+  left: 8vw;
+  top: 3.75vh;
+  width: 50px;
+  height: 50px;
+  transform: scale(0.75);
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.hamburgerLine {
+  background: white;
+  width: 100%;
+  height: 0.2vh;
+}
+
+header {
+  width: 90%;
+  height: 10vh;
+  margin: auto;
+}
+
+.nav-link {
+  position: relative;
+  width: 80%;
+  height: 50%;
+  margin: 0 auto;
+  cursor: pointer;
+  top: 3vh;
+  text-decoration: none;
+  text-align: center;
+  color: #eeeeee;
+  vertical-align: middle;
+  font-weight: 300;
+  font-size: 3.5vh;
+  letter-spacing: 1vw;
+}
+
+.nav-link:hover::after {
+  transition: all 0.25s ease-in-out;
+  transform: scaleX(1.05);
+  opacity: 1;
+}
+
+/* this is the divider line */
+.nav-link::after {
+  content: "";
+  width: inherit;
+  height: 100%;
+  position: absolute;
+  border-bottom: 1px rgb(204, 204, 204) solid;
+  border-top: 1px rgb(204, 204, 204) solid;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    #36697e,
+    rgba(0, 0, 0, 0)
+  );
+  mix-blend-mode: screen;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  opacity: 0.75;
+}
+
+#wrapper {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll !important;
+}
+
+#gridContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  position: relative;
+  width: 90%;
+  height: 110%;
+  top: 4vh;
+  margin: 0 auto;
+}
+
+.posterMask {
+  transition: all 1s ease;
+  position: relative;
+  margin: 0 auto;
+  grid-column: auto;
+  grid-row: auto;
+  height: 350px;
+  width: 230px;
+  border-radius: 20px;
+  filter: drop-shadow(0px 0px 2px #315f72);
+  will-change: opacity;
+  will-change: filter;
+  overflow: hidden;
+}
+
+.posterMask img {
+  width: 100%;
+  height: 100%;
+}
+
+.posterMask:hover {
+  transition: all 0.5s ease;
+  filter: drop-shadow(0px 0px 10px #164357);
+  transform: scale(1.025);
+}
+
+#slider {
+  animation: ;
+  position: absolute;
+  transform: translateX(100%);
+  width: 100vw;
+  height: 100vh;
+  background: ;
+  will-change: transform;
+  z-index: 3;
+}
+
+#vidHolderBG {
+  animation: ;
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.719);
+  z-index: 5;
+}
+
+#vidHolder {
+  animation: ;
+  position: absolute;
+  display: none;
+  left: 0px;
+  right: 0px;
+  margin: 0px auto;
+  top: 30vh;
+  width: 700px;
+  height: 420px;
+  border-radius: 10px;
+  background: rgb(133, 133, 133);
+  z-index: 6;
+}
+
+iframe {
+  position: relative;
+  margin: 30px;
+  width: 640px;
+  height: 360px;
+  z-index: 7;
+}
+
+#vidImage {
+  position: absolute;
+  margin-left: 0;
+  margin-right: 0;
+  left: 0;
+  right: 0;
+  width: 640px;
+  z-index: 5;
+}
+
+#xIcon {
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  background: white;
+  clip-path: polygon(
+    20% 0%,
+    0% 20%,
+    30% 50%,
+    0% 80%,
+    20% 100%,
+    50% 70%,
+    80% 100%,
+    100% 80%,
+    70% 50%,
+    100% 20%,
+    80% 0%,
+    50% 30%
+  );
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  z-index: 3;
+}
+
+#xIcon:hover {
+  transition: all 0.5s ease-out;
+  background: rgb(0, 0, 0);
+  height: 30px;
+  width: 30px;
+  left: 35px;
+  top: 35px;
+}
+
+#xIcon2 {
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+  background: rgb(88, 88, 88);
+  clip-path: polygon(
+    20% 0%,
+    0% 20%,
+    30% 50%,
+    0% 80%,
+    20% 100%,
+    50% 70%,
+    80% 100%,
+    100% 80%,
+    70% 50%,
+    100% 20%,
+    80% 0%,
+    50% 30%
+  );
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  margin: 10px;
+  z-index: 8;
+}
+
+#xIcon2:hover {
+  transition: all 0.5s ease-out;
+  background: rgb(0, 0, 0);
+  height: 20px;
+  width: 20px;
+  margin: 8px;
+  z-index: 8;
+}
+
+#imageHolder {
+  position: relative;
+  top: 20vh;
+  display: block;
+  width: 640px;
+  height: 360px;
+  margin: 0px auto;
+  filter: drop-shadow(0px 0px 10px rgb(34, 82, 88));
+}
+
+#imageHolder img {
+  transition: all 0.25s ease-in-out;
+  animation: ;
+  position: absolute;
+  left: ;
+  opacity: ;
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+}
+
+#imageHolder img:hover {
+  transition: all 0.25s ease-in-out;
+  transform: scale(1.01);
+}
+
+#nextArrow {
+  transition: all 0.25s ease-out;
+  animation: ;
+  position: relative;
+  margin: 0px auto;
+  top: 21vh;
+  width: 120px;
+  height: 50px;
+  transform: scale(0.75);
+}
+
+.arrowShape {
+  transition: all 0.25s ease-out;
+  position: relative;
+  float: left;
+  width: 40px;
+  height: 50px;
+  background: black;
+  clip-path: polygon(70% 0%, 70% 50%, 70% 100%, 35% 100%, 35% 50%, 35% 0%);
+}
+
+#nextArrow:hover .arrowShape {
+  transition: all 0.25s ease-in;
+  background: rgb(173, 87, 87);
+  transform: scale(1.1);
+  clip-path: polygon(55% 0%, 80% 50%, 55% 100%, 20% 100%, 45% 50%, 20% 0%);
+}
+
+@keyframes textDropOne {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+@keyframes textDropTwo {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+@keyframes textFade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes imageSlide {
+  0% {
+    left: 0px;
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes buttonClick {
+  0% {
+    transform: scale(0.75);
+  }
+  50% {
+    transform: scale(0.65);
+  }
+  100% {
+    transform: scale(0.75);
+  }
+}
+
+@keyframes playButton {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes sliderDim {
+  0% {
+    background: rgb(189, 189, 189);
+  }
+  100% {
+    background: rgb(99, 99, 99);
+  }
+}
+
+@keyframes slideOver {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideBack {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes vidHolderBGOpacityUp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* <------------ media screen settings ----------------> */
+
+@media screen and (max-width: 780px) {
+  #gridContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .posterMask {
+    height: 262px;
+    width: 173px;
+    border-radius: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .introText1,
+  .introText2,
+  .introText3,
+  .introText4 {
+    font-size: 200%;
+  }
+  .posterMask {
+    height: 197px;
+    width: 130px;
+    border-radius: 10px;
+  }
+  #gridContainer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+}

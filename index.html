@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ryan Rigley</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/myscripts.js"></script>
+  </head>
+
+  <body>
+    <div id="intro">
+      <div class="introText1">Ryan Rigley</div>
+      <div class="introText2">Video Editor</div>
+      <div class="introText3">Motion Graphics Artist</div>
+      <div class="introText4">Diva</div>
+    </div>
+    <!-- this holds the video file and is run by JS -->
+    <div id="vidHolderBG">
+      <div id="vidHolder">
+        <div id="xIcon2" onclick="vidHolderDown()"></div>
+        <div id="video"></div>
+      </div>
+    </div>
+
+    <!-- this contains the slider with the page information -->
+    <div id="slider">
+      <div id="xIcon" onclick="slideBackFunction();"></div>
+
+      <!-- this is the slideshow section -->
+      <div id="imageHolder"></div>
+      <div id="nextArrow" onclick="slideshowButtonClick()">
+        <div class="arrowShape"></div>
+        <div class="arrowShape"></div>
+        <div class="arrowShape"></div>
+      </div>
+    </div>
+    <!-- end of slider -->
+
+    <div id="background"></div>
+
+    <header>
+      <div id="hamburger">
+        <div class="hamburgerLine"></div>
+        <div class="hamburgerLine"></div>
+        <div class="hamburgerLine"></div>
+      </div>
+      <div class="nav-link">
+        ENTERTAINMENT
+      </div>
+    </header>
+
+    <main>
+      <div id="wrapper">
+        <!-- grid -->
+        <div id="gridContainer">
+          <div
+            class="posterMask"
+            onclick="slideOverFunction(shazamTrailers, '#FF4E50,#F9D423');"
+          >
+            <img id="281502145" src="images/Posters/ShazamPoster.jpg" alt="" />
+          </div>
+          <div
+            class="posterMask"
+            onclick="slideOverFunction(narcosMexicoTrailer, '#0392B4,#032D4B')"
+          >
+            <img src="images/Posters/NarcosMexicoPoster.jpg" alt="" />
+          </div>
+          <div
+            class="posterMask"
+            onclick="slideOverFunction(extinctionTrailer, '#E6DADA,#274046')"
+          >
+            <img src="images/Posters/ExtinctionPoster.jpg" alt="" />
+          </div>
+          <div
+            class="posterMask"
+            onclick="slideOverFunction(moneyHeistTrailer, '#EDDCCA,#AD585A')"
+          >
+            <img src="images/Posters/LaCasaPoster.jpg" alt="" />
+          </div>
+          <div
+            class="posterMask"
+            onclick="slideOverFunction(narcosS2Trailer, '#D3959B, #BFE6BA')"
+          >
+            <img src="images/Posters/NarcosS2Poster.jpg" alt="" />
+          </div>
+          <div
+            class="posterMask"
+            onclick="slideOverFunction(ozarkS1Teaser, '#616161 ,#9bc5c3')"
+          >
+            <img src="images/Posters/OzarkPoster.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="contact">Contact Me</div>
+  </body>
+</html>
