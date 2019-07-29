@@ -90,27 +90,27 @@ function randomPoster() {
 // ----------------Global Variables Area----------------
 
 var shazamTrailers = [
-  '<img onclick = "vidHolderUp(\'281502145\')" src = "images/Stills/ShazamTrailerStill.png" alt = "" srcset = ""/>'
+  '<img onclick = "vidHolderUp(\'281502145\')" src = "Images/Stills/ShazamTrailerStill.png" alt = "" srcset = ""/>'
 ];
 
 var narcosMexicoTrailer = [
-  '<img onclick = "vidHolderUp(\'292769952\')" src = "images/Stills/NarcosMexicoTeaserStill.png" alt = "" srcset = ""/>'
+  '<img onclick = "vidHolderUp(\'292769952\')" src = "Images/Stills/NarcosMexicoTeaserStill.png" alt = "" srcset = ""/>'
 ];
 
 var extinctionTrailer = [
-  '<img onclick = "vidHolderUp(\'279750518\')" src = "images/Stills/ExtinctionTrailerStill.png" alt = "" srcset = ""/>'
+  '<img onclick = "vidHolderUp(\'279750518\')" src = "Images/Stills/ExtinctionTrailerStill.png" alt = "" srcset = ""/>'
 ];
 
 var moneyHeistTrailer = [
-  '<img onclick = "vidHolderUp(\'279750491\')" src = "images/Stills/MoneyHeistS2TrailerStill.png" alt = "" srcset = ""/>'
+  '<img onclick = "vidHolderUp(\'279750491\')" src = "Images/Stills/MoneyHeistS2TrailerStill.png" alt = "" srcset = ""/>'
 ];
 
 var narcosS2Trailer = [
-  '<img onclick = "vidHolderUp(\'208770645\')" src = "images/Stills/NarcosS2TrailerStill.png" alt = "" srcset = ""/>'
+  '<img onclick = "vidHolderUp(\'208770645\')" src = "Images/Stills/NarcosS2TrailerStill.png" alt = "" srcset = ""/>'
 ];
 
 var ozarkS1Teaser = [
-  '<img onclick = "vidHolderUp(\'272281344\')" src = "images/Stills/OzarkS1TeaserStill.png" alt = "" srcset = ""/>'
+  '<img onclick = "vidHolderUp(\'272281344\')" src = "Images/Stills/OzarkS1TeaserStill.png" alt = "" srcset = ""/>'
 ];
 
 // ----------------Functions Area----------------
